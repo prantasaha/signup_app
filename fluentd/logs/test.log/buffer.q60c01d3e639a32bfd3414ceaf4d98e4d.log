@@ -1,0 +1,52 @@
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023-12-08 16:10:49.844 UTC [1] LOG:  received fast shutdown request\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023-12-08 16:10:49.845 UTC [1] LOG:  aborting any active transactions\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 30#30: gracefully shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 31#31: gracefully shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 32#32: gracefully shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 34#34: gracefully shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 30#30: exiting\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 32#32: exiting\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 31#31: exiting\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 34#34: exiting\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 35#35: gracefully shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 35#35: exiting\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 32#32: exit\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 31#31: exit\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 30#30: exit\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 34#34: exit\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 35#35: exit\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 36#36: gracefully shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 36#36: exiting\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 37#37: gracefully shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 37#37: exiting\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 36#36: exit\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 37#37: exit\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 33#33: gracefully shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 33#33: exiting\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 33#33: exit\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023-12-08 16:10:49.851 UTC [1] LOG:  background worker \"logical replication launcher\" (PID 31) exited with exit code 1\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023-12-08 16:10:49.851 UTC [26] LOG:  shutting down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023-12-08 16:10:49.851 UTC [26] LOG:  checkpoint starting: shutdown immediate\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023-12-08 16:10:49.856 UTC [26] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.006 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1A63FA0, redo lsn=0/1A63FA0\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023-12-08 16:10:49.861 UTC [1] LOG:  database system is shut down\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 17 (SIGCHLD) received from 32\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: worker process 32 exited with code 0\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: worker process 35 exited with code 0\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 29 (SIGIO) received\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 17 (SIGCHLD) received from 36\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: worker process 36 exited with code 0\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 29 (SIGIO) received\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 17 (SIGCHLD) received from 30\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: worker process 30 exited with code 0\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 29 (SIGIO) received\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 17 (SIGCHLD) received from 34\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: worker process 34 exited with code 0\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 29 (SIGIO) received\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 17 (SIGCHLD) received from 31\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: worker process 31 exited with code 0\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: worker process 37 exited with code 0\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 29 (SIGIO) received\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: signal 17 (SIGCHLD) received from 33\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: worker process 33 exited with code 0\n","stream":"stderr"}
+1970-01-01T00:33:43+00:00	docker.logs	{"log":"2023/12/08 16:10:49 [notice] 1#1: exit\n","stream":"stderr"}

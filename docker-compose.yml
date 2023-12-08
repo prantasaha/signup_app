@@ -1,0 +1,65 @@
+version: '3'
+
+networks:
+    server-bridge:
+        driver: bridge
+
+services:
+  frontend:
+    # build:
+    #   context: ./frontend
+    image: pranta96/signapp_frontend:latest  
+    container_name: frontend_react
+    ports:
+      - "3000:3000"  
+    volumes:
+      - ./build:/usr/share/nginx/html
+    networks:
+      - server-bridge
+
+  postgres:
+    image: postgres:latest
+    env_file:
+      - ./.env
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./${postgres_data}:/var/lib/postgresql/data
+    networks:
+      - server-bridge
+
+  backend:
+    # build:
+    #   context: ./backend
+    image: pranta96/signapp_backend:latest  
+    ports:
+      - "8000:8000" 
+    container_name: backend_django
+    depends_on:
+      - postgres
+      - frontend
+    env_file:
+      - ./.env
+    volumes:
+      - ./build:/app/build
+      - ./backend/auth_system/settings.py:/app/auth_system/settings.py
+    networks:
+      - server-bridge
+
+  fluentd:
+    container_name: fluentd
+    user: root
+    image: fluent/fluentd:v1.11-debian
+    volumes:
+    - /var/lib/docker/containers:/fluentd/log/containers
+    - ./fluentd/fluent.conf:/fluentd/etc/fluent.conf
+    - ./fluentd/logs:/output/
+    logging:
+      driver: "local"
+
+  
+
+# volumes:
+#   postgres_data:
