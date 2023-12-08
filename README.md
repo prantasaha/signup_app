@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Auth System
 
 This is a project that demonstrates how you could implement a fully featured JSON Web Token Authentication system in Django and React. This includes showing how to implement features like account activation, password reset, and also social authentication with google and facebook oauth2. Further improvements to make it more production ready would just be to utilize the refresh token to get a new access token when the application reloads and also reloads when you go to an important page such as a checkout page, and having alerts present on the frontend to make things more user friendly.
@@ -26,3 +27,12 @@ If you get an error when using social authentication that says "ModuleNotFoundEr
 -   Open the file "venv/lib/python3.X/site-packages/djoser/social/token/jwt.py"
 -   Change the line "from django.utils.six import text_type" to "from six import text_type"
 -   With this change you should be able to log in using Google and Facebook OAuth2
+=======
+# signup_app
+A signup app made with react, django, postgres & fluentd. Fully dockerized. 
+
+Logging : A Fluentd container is used for logging. All the container logs will be written to repo's /fluentd/logs directory.
+
+Instruction to run the project:
+1. 
+>>>>>>> 8ee5129c976825ea2b1e261ce687344eee6b350b
