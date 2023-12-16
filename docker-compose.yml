@@ -11,7 +11,7 @@ services:
     image: pranta96/signapp_frontend:latest  
     container_name: frontend_react
     ports:
-      - "3000:3000"  
+      - "3000:80"  
     volumes:
       - ./build:/usr/share/nginx/html
     networks:
