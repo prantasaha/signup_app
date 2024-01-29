@@ -8,5 +8,4 @@ Instruction to run the project:
 2. Data seed : A dummy sql file is given to repo in case of database failure so the local development doestn't get interrupted. To seed this dummy data into container execute the seed-db.sh script
 3. Logging : A Fluentd container is used for logging. All the container logs will be written to repo's /fluentd/logs directory in real time.
 
-N.B. The repo still got some bugs in signing up (my gmail app key is not working for now), as a result even after sign up user wont be able to sign in. Still working in this issue. Requesting you to consider this is done as the application will be up atleast & all the containerization conventions were implemented.
 
