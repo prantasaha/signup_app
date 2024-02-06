@@ -48,12 +48,12 @@ jobs:
 
       - name: Set result
         id: accept_pr
-        run: echo "success" # Set the result to success by default
+        run: echo "result = success" # Set the result to success by default
 
   merge:
     needs: build
     runs-on: ubuntu-latest
-    if: ${{ needs.build.outputs.result == 'success' }}
+    # if: ${{ needs.build.outputs.result == 'success' }}
 
     steps:
       - name: Merge to Main

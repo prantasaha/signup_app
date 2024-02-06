@@ -1,0 +1,17 @@
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Merge dev into main
+      run: |
+        git config --global user.name "obijzbo"
+        git pull
+        git checkout main
+        git merge --allow-unrelated-histories dev
+        git push origin main
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
