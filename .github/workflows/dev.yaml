@@ -48,7 +48,7 @@ jobs:
 
       - name: Set result
         id: accept_pr
-        run: echo "result=success" # Set the result to success by default
+        run: echo "success" # Set the result to success by default
 
   merge:
     needs: build
