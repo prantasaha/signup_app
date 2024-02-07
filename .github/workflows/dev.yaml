@@ -52,10 +52,10 @@ jobs:
 
   notify:
     runs-on: ubuntu-latest
-    # needs: build
+    needs: build
+    if: ${{ failure() }}
     steps:
       - name: Send Email Notification on Failure
-        # if: failure()
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
