@@ -20,45 +20,42 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
+      # - name: Set up Python
+      #   uses: actions/setup-python@v2
+      #   with:
+      #     python-version: 3.8
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r backend/requirements.txt
-          pip install pylint
-      - name: Lint code
-        run: |
-          pylint backend
-        continue-on-error: true
+      # - name: Set up Python
+      #   uses: actions/setup-python@v2
+      #   with:
+      #     python-version: 3.8
+      # - name: Install dependencies
+      #   run: |
+      #     python -m pip install --upgrade pip
+      #     pip install -r backend/requirements.txt
+      #     pip install pylint
+      # - name: Lint code
+      #   run: |
+      #     pylint backend
+      #   continue-on-error: true
 
-      - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@master
+      # - name: SonarCloud Scan
+      #   uses: sonarsource/sonarcloud-github-action@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #   continue-on-error: true
+
+      # - name: Set result
+      #   id: accept_pr
+      #   run: echo "result = success" # Set the result to success by default
+
+      - name: Merge dev into main
+        run: |
+          git config --global user.name "prantasaha"
+          git pull
+          git checkout master
+          git merge --allow-unrelated-histories dev
+          # git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        continue-on-error: true
-
-      - name: Set result
-        id: accept_pr
-        run: echo "result = success" # Set the result to success by default
-
-  merge:
-    needs: build
-    runs-on: ubuntu-latest
-    # if: ${{ needs.build.outputs.result == 'success' }}
-
-    steps:
-      - name: Merge to Main
-        run: |
-          # Use your preferred method to merge the PR from dev to main
-          git checkout main
-          git merge --no-ff ${{ github.event.before }}
-          git push origin main
+            GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
