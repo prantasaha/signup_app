@@ -52,6 +52,7 @@ jobs:
 
       - name: Merge dev into main
         run: |
+          git config --global user.email "prantaw@gmail.com"
           git config --global user.name "prantasaha"
           git pull
           git checkout master
