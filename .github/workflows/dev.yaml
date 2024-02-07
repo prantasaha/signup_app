@@ -63,6 +63,7 @@ jobs:
           username: ${{ secrets.GMAIL_USERNAME }}
           password: ${{ secrets.GMAIL_PASSWORD }} #use app password here
           subject: 'CI Failure Notification'
+          from: example limited
           to: prantaw@gmail.com
           body: |
             The CI build failed for the repository.
