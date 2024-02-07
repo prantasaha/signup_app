@@ -54,10 +54,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
       - name: Send Email Notification on Failure
+        if: failure()
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -75,7 +73,7 @@ jobs:
             ```
 
             Check the GitHub Actions workflow for details.
-        if: failure()
+        
 
       # - name: Merge dev into main
       #   run: |
