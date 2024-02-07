@@ -70,7 +70,7 @@ jobs:
             
             **Failure Details:**
             ```
-            CI test failed. Code has issues. check workflow & sonarscan results
+            ${{ steps.test.outputs.stdout }}
             ```
 
             Check the GitHub Actions workflow for details.
