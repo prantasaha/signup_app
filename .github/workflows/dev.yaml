@@ -1,4 +1,4 @@
-name: merge from dev
+name: merge from dev & trigger master
 
 on:
   workflow_dispatch:
