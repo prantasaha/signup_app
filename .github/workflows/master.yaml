@@ -48,10 +48,10 @@ jobs:
         DOCKER_IMAGE_BACKTEND: ${{ secrets.DOCKER_IMAGE_BACKEND }}
       run: |
         cd ./frontend
-        docker build -t $DOCKER_USERNAME/DOCKER_IMAGE_FRONTEND:latest .
+        docker build -t $DOCKER_USERNAME/$DOCKER_IMAGE_FRONTEND:latest .
         echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        docker push $DOCKER_USERNAME/DOCKER_IMAGE_FRONTEND:latest
+        docker push $DOCKER_USERNAME/$DOCKER_IMAGE_FRONTEND:latest
         cd ../backend
-        docker build -t $DOCKER_USERNAME/DOCKER_IMAGE_BACKEND:latest .
+        docker build -t $DOCKER_USERNAME/$DOCKER_IMAGE_BACKEND:latest .
         # echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        docker push $DOCKER_USERNAME/DOCKER_IMAGE_BACKEND:latest
+        docker push $DOCKER_USERNAME/$DOCKER_IMAGE_BACKEND:latest
