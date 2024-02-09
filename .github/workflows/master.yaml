@@ -51,7 +51,7 @@ jobs:
         docker build -t $DOCKER_USERNAME/$DOCKER_IMAGE_FRONTEND:actionv1 .
         echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         docker push $DOCKER_USERNAME/$DOCKER_IMAGE_FRONTEND:actionv1
-        cd ./backend
+        cd ../backend
         docker build -t $DOCKER_USERNAME/$DOCKER_IMAGE_BACKEND:actionv1 .
         echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         docker push $DOCKER_USERNAME/$DOCKER_IMAGE_BACKEND:actionv1
